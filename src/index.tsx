@@ -6,10 +6,10 @@ import * as serviceWorker from './utils/serviceWorker'
 import App from './App'
 
 // tslint:dsaible ordered-imports
-import './style/lib/bootstrap-grid.min.css'
-import './style/lib/normalize.css'
-import './index.css'
-import ErrorBoundary from './components/ErrorBoundary'
+import './styles/lib/bootstrap-grid.min.css'
+import './styles/lib/normalize.css'
+import './styles/index.css'
+import { ErrorBoundary } from './components/ErrorBoundary'
 
 ReactDOM.render(
     <ErrorBoundary>
