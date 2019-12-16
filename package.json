@@ -19,7 +19,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "fmt": "prettier --write '**/*.ts' '**/*.md' '**/*.json' '**/*.js' '!src/model/proto.js' '!lib/**/*'",
+    "format": "npm run fmt",
+    "lint": "tslint --project tsconfig.json --config tslint.js",
+    "lint-fix": "tslint --fix --project tsconfig.json --config tslint.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +39,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.1.0",
+    "tslint-strict-error-throw": "^1.0.1"
   }
 }
