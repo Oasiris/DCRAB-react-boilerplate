@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from '../icons/logo.svg'
 
-import '../styles/App.css'
+import '../styles/HOme.css'
 
 export const Home: React.FC = () => {
     return (

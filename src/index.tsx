@@ -8,7 +8,7 @@ import App from './App'
 // tslint:dsaible ordered-imports
 import './styles/lib/bootstrap-grid.min.css'
 import './styles/lib/normalize.css'
-import './styles/index.css'
+import './styles/index.scss'
 import { ErrorBoundary } from './components/ErrorBoundary'
 
 ReactDOM.render(
