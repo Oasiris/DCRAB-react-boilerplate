@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-import { withRouter, RouteComponentProps } from 'react-router'
+import { withRouter, RouteComponentProps } from "react-router"
 
 const _NotFound: React.FC<RouteComponentProps> = ({ history }) => {
     return (

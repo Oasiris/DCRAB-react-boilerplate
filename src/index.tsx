@@ -1,21 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react"
+import ReactDOM from "react-dom"
 
-import * as serviceWorker from './utils/serviceWorker'
+import * as serviceWorker from "./utils/serviceWorker"
 
-import App from './App'
+import App from "./App"
+import { ErrorBoundary } from "./components/ErrorBoundary"
 
-// tslint:dsaible ordered-imports
-import './styles/lib/bootstrap-grid.min.css'
-import './styles/lib/normalize.css'
-import './styles/index.scss'
-import { ErrorBoundary } from './components/ErrorBoundary'
+import "./styles/index.scss"
+import "./styles/lib/bootstrap-grid.min.css"
+import "./styles/lib/normalize.css"
+
+// // tslint:disable ordered-imports
 
 ReactDOM.render(
     <ErrorBoundary>
         <App />
     </ErrorBoundary>,
-    document.getElementById('root'),
+    document.getElementById("root"),
 )
 
 // If you want your app to work offline and load faster, you can change

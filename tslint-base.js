@@ -7,6 +7,7 @@ module.exports = {
      * Note that any formatting-related rules here might get overwritten by the Prettier config in `tslint.json`.
      */
     /* Borrowed from `firebase/functions`. */
+    'jsx-no-lambda': false,
     'interface-name': false,
     'interface-over-type-literal': false,
     'max-classes-per-file': false,
