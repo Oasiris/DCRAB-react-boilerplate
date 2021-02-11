@@ -11,8 +11,10 @@ type State =
       }
 
 export class ErrorBoundary extends React.Component<{}, State> {
+    // eslint-disable-next-line
     constructor(props: any) {
         super(props)
+
         this.state = { hasError: false, error: null }
     }
 

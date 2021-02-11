@@ -72,16 +72,19 @@ module.exports = {
     'import/prefer-default-export': 0,
 
     // Don't prohibit unescaped entities like "'".
-    'react/no-unescaped-entities': [1], // 1 means 'warn'.
+    'react/no-unescaped-entities': 0,
 
     // Allow 'else' after 'return', for readability.
     'no-else-return': 0,
+
+    // Allow console.logs (during development).
+    'no-console': 0,
 
     // Don't enforce prop-types – that's what TypeScript is for.
     'react/prop-types': 0,
 
     // Warn on, but don't forbid, using Array index as keys in JSX.
-    'react/no-array-index-key': 1,
+    'react/no-array-index-key': 1, // 1 means 'warn'.
 
     // Warn on, but don't forbid, multiple JSX expressions per line.
     'react/jsx-one-expression-per-line': 1,
