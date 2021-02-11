@@ -1,14 +1,18 @@
-import React from "react"
+import React from 'react'
 
-import { withRouter, RouteComponentProps } from "react-router"
+import { withRouter, RouteComponentProps } from 'react-router'
 
-const _NotFound: React.FC<RouteComponentProps> = ({ history }) => {
+type Props = RouteComponentProps & {}
+
+const _NotFound: React.FC<Props> = ({ history }) => {
     return (
         <div id="notFound">
             <h3>Not Found</h3>
             <p>We couldn't find that page.</p>
 
-            <button children="Back" onClick={() => history.goBack()} />
+            <button type="button" onClick={() => history.goBack()}>
+                Back
+            </button>
         </div>
     )
 }

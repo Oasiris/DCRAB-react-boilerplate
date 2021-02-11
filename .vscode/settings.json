@@ -1,7 +1,7 @@
 {
   // "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "tslint.configFile": "./tslint.js",
+  // "tslint.configFile": "./tslint.js",
 
   "editor.codeActionsOnSave": {
     "source.fixAll.tslint": true

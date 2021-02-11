@@ -1,0 +1,3 @@
+{
+  "extends": ["tslint-react", "./tslint-base.js", "tslint-config-prettier", "./tslint-import.js"]
+}

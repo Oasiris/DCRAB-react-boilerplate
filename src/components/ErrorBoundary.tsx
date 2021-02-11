@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react'
 
 type State =
     | {
           hasError: false
-          error: null,
+          error: null
       }
     | {
           hasError: true
-          error: Error,
+          error: Error
       }
 
 export class ErrorBoundary extends React.Component<{}, State> {
@@ -22,7 +22,7 @@ export class ErrorBoundary extends React.Component<{}, State> {
     }
 
     componentDidCatch(err: Error, info: React.ErrorInfo) {
-        console.log("CAUGHT ERROR")
+        console.log('CAUGHT ERROR')
     }
 
     render() {
