@@ -24,6 +24,17 @@ function Home() {
                 </p>
             </div>
             <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+
+            <button
+                style={{ background: 'pink' }}
+                onClick={() => {
+                    throw new Error(
+                        'this is a custom error thrown at ' + new Date().toLocaleString(),
+                    )
+                }}
+            >
+                Click me to throw an error
+            </button>
         </>
     )
 }

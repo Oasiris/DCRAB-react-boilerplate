@@ -1,8 +1,34 @@
-import { Routes, Route, Link, Outlet } from 'react-router-dom'
+import {
+    Route,
+    Link,
+    Outlet,
+    createBrowserRouter,
+    createRoutesFromElements,
+    RouterProvider,
+} from 'react-router-dom'
 
 import Home from './routes/home'
-import NoMatch from './routes/no-match'
 import ErrorBoundary from './routes/error-boundary'
+
+// Uncomment this when you're ready to replace "Not found" error boundary page with a dedicated "Not found" page.
+// import NoMatch from './routes/no-match'
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route path="/" element={<Layout />} errorElement={<ErrorBoundary />}>
+            <Route errorElement={<ErrorBoundary />}>
+                <Route index element={<Home />} />
+                <Route path="about" element={<About />} />
+                <Route path="dashboard" element={<Dashboard />} />
+
+                {/* Using path="*"" means "match anything", so this route
+                acts like a catch-all for URLs that we don't have explicit
+                routes for. */}
+                {/* <Route path="*" element={<NoMatch />} /> */}
+            </Route>
+        </Route>,
+    ),
+)
 
 export default function App() {
     return (
@@ -21,18 +47,7 @@ export default function App() {
             {/* Routes nest inside one another. Nested route paths build upon
                 parent route paths, and nested route elements render inside
                 parent route elements. See the note about <Outlet> below. */}
-            <Routes>
-                <Route path="/" element={<Layout />} errorElement={<ErrorBoundary />}>
-                    <Route index element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="dashboard" element={<Dashboard />} />
-
-                    {/* Using path="*"" means "match anything", so this route
-                    acts like a catch-all for URLs that we don't have explicit
-                    routes for. */}
-                    <Route path="*" element={<NoMatch />} />
-                </Route>
-            </Routes>
+            <RouterProvider router={router} />
         </div>
     )
 }
