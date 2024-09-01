@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# D-CRAB
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="public/crab-favicon.svg" width=192 height=192 />
 
-Currently, two official plugins are available:
+This TypeScript React project was bootstrapped with **D-CRAB 2024**:
 
--   [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
--   [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **D**avid's
+-   **C**reate
+-   **R**eact
+-   **A**pp
+-   **B**oilerplate.
 
-## Expanding the ESLint configuration
+Despite its legacy name, the 2024 edition of this boilerplate has dropped CRA (Create-React-App) in favor of Vite.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Details
 
--   Configure the top-level `parserOptions` property like this:
+-   React v18
+    -   React Router v6
+-   TypeScript v5
+-   SCSS
+-   NPM
+-   Auto-formatting and linting w/ [Prettier](https://prettier.io/)
 
-```js
-export default tseslint.config({
-    languageOptions: {
-        // other options...
-        parserOptions: {
-            project: ['./tsconfig.node.json', './tsconfig.app.json'],
-            tsconfigRootDir: import.meta.dirname,
-        },
-    },
-})
-```
+Powered by Node.js LTS (v20) and Visual Studio Code.
 
--   Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
--   Optionally add `...tseslint.configs.stylisticTypeChecked`
--   Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Setup
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This project is intended to be used with VS Code.
 
-export default tseslint.config({
-    // Set the react version
-    settings: { react: { version: '18.3' } },
-    plugins: {
-        // Add the react plugin
-        react,
-    },
-    rules: {
-        // other rules...
-        // Enable its recommended rules
-        ...react.configs.recommended.rules,
-        ...react.configs['jsx-runtime'].rules,
-    },
-})
-```
+When opening the directory in VSCode, you will be prompted to install the [recommended extensions](./.vscode/extensions.json).
+
+1. Install these, as prompted.
+2. Open the "Extensions" marketplace by clicking the corresponding button in the left menu bar.
+3. Navigate to the extension titled "TSLint."
+4. Install version 1.2.3 of the extension.
+
+    a. Click the dropdown next to "Uninstall".
+
+    b. Click the option, "Install another version..."
+
+    c. Select 1.2.3 from the subsequent menu.
+
+    d. Reload the window when prompted.
+
+5. Enjoy!
