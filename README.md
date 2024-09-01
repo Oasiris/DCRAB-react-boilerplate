@@ -5,12 +5,12 @@
 This TypeScript React project was bootstrapped with **D-CRAB 2024**:
 
 -   **D**avid's
--   **C**reate
+-   **C**ustom
 -   **R**eact
 -   **A**pp
 -   **B**oilerplate.
 
-Despite its legacy name, the 2024 edition of this boilerplate has dropped CRA (Create-React-App) in favor of Vite.
+This boilerplate uses the latest versions of Vite + TypeScript + SCSS, and includes React Router boilerplate code.
 
 ## Details
 
