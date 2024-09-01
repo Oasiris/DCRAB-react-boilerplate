@@ -7,7 +7,7 @@ import {
     RouterProvider,
 } from 'react-router-dom'
 
-import Home from './routes/home'
+import Home from './routes/home2.tsx'
 import ErrorBoundary from './routes/error-boundary'
 
 // Uncomment this when you're ready to replace "Not found" error boundary page with a dedicated "Not found" page.
