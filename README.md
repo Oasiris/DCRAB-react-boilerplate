@@ -1,24 +1,50 @@
-# D-CRAB
+# React + TypeScript + Vite
 
-This project was bootstrapped with **D-CRAB** 2019, or **D**avid's **C**reate-**R**eact-**A**pp **B**oilerplate.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Setup
+Currently, two official plugins are available:
 
-This project is intended to be used with VS Code.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-When opening the directory in VSCode, you will be prompted to install the [recommended extensions](./.vscode/extensions.json).
+## Expanding the ESLint configuration
 
-1. Install these, as prompted.
-2. Open the "Extensions" marketplace by clicking the corresponding button in the left menu bar.
-3. Navigate to the extension titled "TSLint."
-4. Install version 1.2.3 of the extension.
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-    a. Click the dropdown next to "Uninstall".
+- Configure the top-level `parserOptions` property like this:
 
-    b. Click the option, "Install another version..."
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-    c. Select 1.2.3 from the subsequent menu.
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-    d. Reload the window when prompted.
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-5. Enjoy!
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
