@@ -10,7 +10,7 @@ This TypeScript React project was bootstrapped with **D-CRAB 2024**:
 -   **A**pp
 -   **B**oilerplate.
 
-This boilerplate uses the latest versions of Vite + TypeScript + SCSS, and includes React Router boilerplate code.
+This boilerplate uses the latest versions of Vite + TypeScript + SCSS as of August 2024, and includes React Router boilerplate code.
 
 ## Details
 
