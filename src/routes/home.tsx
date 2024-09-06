@@ -21,6 +21,7 @@ function Home() {
                 </a>
             </div>
             <h1>Vite + React</h1>
+
             <div className="card">
                 <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
                 <p>
@@ -39,6 +40,17 @@ function Home() {
             >
                 Click me to throw an error
             </button>
+
+
+            <div>
+                <h3>Environment Variables</h3>
+                <p>
+                    VITE_SERVER_API_URL: <code>{import.meta.env.VITE_SERVER_API_URL}</code>
+                </p>
+                <p>
+                    VITE_SERVER_STATIC_URL: <code>{import.meta.env.VITE_SERVER_STATIC_URL}</code>
+                </p>
+            </div>
         </>
     )
 }
