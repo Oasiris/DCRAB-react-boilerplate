@@ -9,8 +9,8 @@ This boilerplate uses the latest versions of Vite + TypeScript + SCSS as of Augu
 ## Details
 
 - React v18
-  - React Router v6
-- TypeScript v5
+  - React Router
+- TypeScript
 - SCSS
 - NPM
 - Auto-formatting and linting w/ [Prettier](https://prettier.io/)
