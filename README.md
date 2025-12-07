@@ -8,14 +8,20 @@ This boilerplate uses the latest versions of Vite + TypeScript + SCSS as of Augu
 
 ## Details
 
--   React v18
-    -   React Router v6
--   TypeScript v5
--   SCSS
--   NPM
--   Auto-formatting and linting w/ [Prettier](https://prettier.io/)
+- React v18
+  - React Router v6
+- TypeScript v5
+- SCSS
+- NPM
+- Auto-formatting and linting w/ [Prettier](https://prettier.io/)
 
-Powered by Node.js LTS (v20) and Visual Studio Code.
+Powered by Node.js LTS and Visual Studio Code.
+
+## Dev instructions
+
+Use the locally configured version of Node via NVM:
+
+`nvm install && nvm use`
 
 ## Setup
 
